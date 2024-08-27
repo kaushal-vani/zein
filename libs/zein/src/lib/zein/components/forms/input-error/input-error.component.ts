@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'z-input-error',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './input error.component.html',
-  styleUrl: './input error.component.scss',
+  templateUrl: './input-error.component.html',
+  styleUrl: './input-error.component.scss',
 })
 export class InputErrorComponent {}
