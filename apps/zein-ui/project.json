@@ -1,28 +1,28 @@
 {
-  "name": "zein",
+  "name": "zein-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/zein/src",
+  "sourceRoot": "apps/zein-ui/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/zein",
-        "index": "apps/zein/src/index.html",
-        "browser": "apps/zein/src/main.ts",
+        "outputPath": "dist/apps/zein-ui",
+        "index": "apps/zein-ui/src/index.html",
+        "browser": "apps/zein-ui/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/zein/tsconfig.app.json",
+        "tsConfig": "apps/zein-ui/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/zein/public"
+            "input": "apps/zein-ui/public"
           }
         ],
-        "styles": ["apps/zein/src/styles.scss"],
+        "styles": ["apps/zein-ui/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -53,10 +53,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "zein:build:production"
+          "buildTarget": "zein-ui:build:production"
         },
         "development": {
-          "buildTarget": "zein:build:development"
+          "buildTarget": "zein-ui:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "zein:build"
+        "buildTarget": "zein-ui:build"
       }
     },
     "lint": {
@@ -74,15 +74,15 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/zein/jest.config.ts"
+        "jestConfig": "apps/zein-ui/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "zein:build",
+        "buildTarget": "zein-ui:build",
         "port": 4200,
-        "staticFilePath": "dist/apps/zein/browser",
+        "staticFilePath": "dist/apps/zein-ui/browser",
         "spa": true
       }
     }

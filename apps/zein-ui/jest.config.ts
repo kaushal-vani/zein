@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'zein',
+  displayName: 'zein-ui',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/zein',
+  coverageDirectory: '../../coverage/apps/zein-ui',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

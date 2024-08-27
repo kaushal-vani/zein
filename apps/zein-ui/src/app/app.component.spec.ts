@@ -14,12 +14,14 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome zein');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Welcome zein-ui'
+    );
   });
 
-  it(`should have as title 'zein'`, () => {
+  it(`should have as title 'zein-ui'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('zein');
+    expect(app.title).toEqual('zein-ui');
   });
 });

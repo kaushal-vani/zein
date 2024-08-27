@@ -7,10 +7,10 @@ export default defineConfig({
     ...nxE2EPreset(__filename, {
       cypressDir: 'src',
       webServerCommands: {
-        default: 'nx run zein:serve:development',
-        production: 'nx run zein:serve:production',
+        default: 'nx run zein-ui:serve:development',
+        production: 'nx run zein-ui:serve:production',
       },
-      ciWebServerCommand: 'nx run zein:serve-static',
+      ciWebServerCommand: 'nx run zein-ui:serve-static',
     }),
     baseUrl: 'http://localhost:4200',
   },
