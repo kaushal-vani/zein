@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,4 +8,17 @@ import { CommonModule } from '@angular/common';
   templateUrl: './checkbox.component.html',
   styleUrl: './checkbox.component.scss',
 })
-export class CheckboxComponent {}
+export class  CheckboxComponent {
+  @Input() label = '';
+  @Input() checked = false;
+  @Input() disabled = false;
+
+  @Output() checkedChange: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+  toggleCheck(): void {
+    if (!this.disabled) {
+      this.checked = !this.checked;
+      this.checkedChange.emit(this.checked);
+    }
+  }
+}

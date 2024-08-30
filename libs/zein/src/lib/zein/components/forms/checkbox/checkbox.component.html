@@ -1,1 +1,9 @@
-<p>checkbox works!</p>
+<div class="checkbox-container" (click)="toggleCheck()">
+    <input
+      type="checkbox"
+      [checked]="checked"
+      [disabled]="disabled"
+      (change)="toggleCheck()"
+    />
+    <label>{{ label }}</label>
+  </div>
