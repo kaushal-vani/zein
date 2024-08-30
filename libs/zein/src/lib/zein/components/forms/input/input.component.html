@@ -1,1 +1,10 @@
-<p>input works!</p>
+<div class="input-container">
+    <label *ngIf="label">{{ label }}</label>
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      [disabled]="disabled"
+      (input)="onInput($event)"
+    />
+  </div>
