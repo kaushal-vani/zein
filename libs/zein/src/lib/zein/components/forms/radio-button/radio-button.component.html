@@ -1,1 +1,11 @@
-<p>radio-button works!</p>
+<div class="radio-button-container">
+    <input
+      type="radio"
+      [name]="name"
+      [value]="value"
+      [checked]="checked"
+      [disabled]="disabled"
+      (change)="onChange()"
+    />
+    <label>{{ label }}</label>
+  </div>
